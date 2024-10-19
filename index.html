@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="description" content="A comprehensive collection of physical exercises complete with live demonstrations">
+        <meta name="keywords" content="fitnesstotal, fitness total, totalfitness, total fitness">
+        <meta name="author" content="Shamar Richards">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <title>FitnessTotal</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" href="favicon.png">
+    </head>
+
+    <body>
+        <!-- Placeholder for the loading screen -->
+        <div id="loadingScreen"></div>
+
+        <main style="display: none;" id="mainContent">
+            <!-- Filter and Search Section -->
+            <section id="filter">
+                <div class="container">
+                    <input type="text" id="searchInput" placeholder="Search exercises...">
+                    <button class="filter-btn" data-category="all">All</button>
+                    <button class="filter-btn" data-category="body">Body</button>
+                    <button class="filter-btn" data-category="band">Band</button>
+                    <button class="filter-btn" data-category="barbell">Barbell</button>
+                    <button class="filter-btn" data-category="ball">Ball</button>
+                    <button class="filter-btn" data-category="dumbbell">Dumbbell</button>
+                    <button class="filter-btn" data-category="machine">Machine</button>
+                </div>
+            </section>
+
+            <!-- Exercise Gallery Section -->
+            <section id="gallery">
+                <div class="container">
+                    <h2>FitnessTotal</h2>
+                    <div id="exerciseContainer" class="exercise-container">
+                        <!-- Exercise items dynamically added here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Popup Window -->
+        <div id="popup" class="popup">
+            <span class="close">&times;</span>
+            <div class="popup-content">
+                <div id="popupDescription" class="popup-description">
+                    <!-- SVG images and description will be added dynamically here -->
+                </div>
+            </div>
+        </div>
+
+        <script src="countdown.js"></script>  <!-- Countdown script -->
+        <script src="script.js"></script>     <!-- Other main scripts -->
+    </body>
+</html>
