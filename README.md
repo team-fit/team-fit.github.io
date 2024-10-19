@@ -26,7 +26,7 @@ FitnessTotal is built with **600 lines of code** and contains over **250+ exerci
 
 By curating this collection, FitnessTotal aims to improve community awareness of how to complete exercises with the correct form, not only preventing injury but also adding confidence.
 
-While the source data (SVG images and JSON descriptions) came from an open-source directory, [Everkinectic's GitHub repository](https://github.com/everkinetic/data/tree/main/dist/svg), which is free to use under the **CC Attribution-ShareAlike 4.0 International** license, we ensured it was appropriate for use in this project.
+ The source data (SVG images and JSON descriptions) came from an open-source directory, [Everkinectic's GitHub repository](https://github.com/everkinetic/data/tree/main/dist/svg), which is free to use under the **CC Attribution-ShareAlike 4.0 International** license, I ensured it was appropriate for use in this project.
 
 ---
 
