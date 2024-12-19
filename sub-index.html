@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pushup Timer</title>
+    <link rel="stylesheet" href="sub-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pushup Timer</h1>
+        <form id="setupForm">
+            <label for="sets">Number of Sets:</label>
+            <input type="number" id="sets" min="1" max="10" value="5" required>
+
+            <label for="reps">Number of Reps per Set:</label>
+            <input type="number" id="reps" min="1" max="50" value="20" required>
+
+            <label for="total_time">Total Workout Time:</label>
+            <select id="total_time">
+                <option value="900">15 minutes</option>
+                <option value="1800">30 minutes</option>
+                <option value="3600">1 hour</option>
+                <option value="7200">2 hours</option>
+                <option value="18000">5 hours</option>
+            </select>
+
+            <button type="submit">Start Workout</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('setupForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Gather form data
+            const sets = document.getElementById('sets').value;
+            const reps = document.getElementById('reps').value;
+            const total_time = document.getElementById('total_time').value;
+
+            // Save to localStorage and navigate to the timer page
+            localStorage.setItem('sets', sets);
+            localStorage.setItem('reps', reps);
+            localStorage.setItem('total_time', total_time);
+
+            window.location.href = 'sub-timer.html';
+        });
+    </script>
+</body>
+</html>
