@@ -28,9 +28,6 @@ const fetchQuote = async () => {
     // Display the quote and author in the textarea
     quoteBox.value = `"${quote}"\n\n- ${author}`;
 
-    // Update the Twitter share link with the quote and author
-    twitterShare.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent('"' + quote + '" - ' + author)}`;
-
     // Hide loading indicator
     loadingIndicator.classList.add('hidden');
   } catch (error) {
