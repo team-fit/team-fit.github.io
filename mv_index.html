@@ -17,19 +17,33 @@
       height: 100vh;
       flex-direction: column;
       position: relative;
+      padding: 20px;
     }
 
+    /* Larger and responsive textarea */
     #quoteBox {
-      width: 300px;
-      height: 100px;
-      padding: 10px;
+      width: 100%;
+      max-width: 600px;
+      height: 150px;
+      padding: 15px;
       border: 1px solid #ccc;
       margin-bottom: 20px;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 400;
       line-height: 1.5;
       resize: none;
       background-color: #fff;
+      border-radius: 8px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    /* Make textarea bigger on mobile */
+    @media (max-width: 768px) {
+      #quoteBox {
+        font-size: 16px;
+        height: 120px;
+      }
     }
 
     #getQuoteBtn {
@@ -42,6 +56,7 @@
       margin-bottom: 20px;
       transition: all 0.3s ease-in-out; /* Smooth teleport animation */
       position: absolute;
+      border-radius: 8px;
     }
 
     #getQuoteBtn:hover {
@@ -61,6 +76,37 @@
       color: #1DA1F2;
       font-weight: 600;
     }
+
+    /* Spectacular "Created by Omar" section */
+    #createdBy {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      color: #FFC67D;
+      animation: fadeIn 2s ease-in-out, slideUp 1.5s ease-out 1s;
+    }
+
+    #createdBy span {
+      display: block;
+      font-size: 28px;
+      color: #333;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #fff, 0 0 15px #FFC67D;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      0% { transform: translateY(50px); }
+      100% { transform: translateY(0); }
+    }
+
   </style>
 </head>
 <body>
@@ -70,8 +116,12 @@
   <button id="getQuoteBtn">Get Motivated</button>
 
   <div id="loading">Loading...</div>
-  
-  <a id="twitterShare" class="share-btn" target="_blank">Share on Twitter</a>
+
+  <!-- Spectacular 'Created by Omar' Section -->
+  <div id="createdBy">
+    <span>Created by</span>
+    <span>Omar</span>
+  </div>
 
   <script src="mv_script.js"></script>
 
