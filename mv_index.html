@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivational Quotes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #F7F7F7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      position: relative;
+    }
+
+    #quoteBox {
+      width: 300px;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      resize: none;
+      background-color: #fff;
+    }
+
+    #getQuoteBtn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: 1px solid #4CAF50;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: all 0.3s ease-in-out; /* Smooth teleport animation */
+      position: absolute;
+    }
+
+    #getQuoteBtn:hover {
+      background-color: #45a049;
+    }
+
+    #loading {
+      display: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .share-btn {
+      text-decoration: none;
+      color: #1DA1F2;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <textarea id="quoteBox" readonly placeholder="Your motivational quote will appear here..."></textarea>
+  
+  <button id="getQuoteBtn">Get Motivated</button>
+
+  <div id="loading">Loading...</div>
+  
+  <a id="twitterShare" class="share-btn" target="_blank">Share on Twitter</a>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
